@@ -25,5 +25,4 @@ public class PricingCompare {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo($("#column-b"));
     }
-
 }
