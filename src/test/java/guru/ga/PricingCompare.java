@@ -22,7 +22,12 @@ public class PricingCompare {
         $(byText("Pricing")).hover();
         $(byText("Compare plans")).click();
         $(".h2-mktg").shouldHave(text("Choose the plan that’s right for you."));
+    }
+    @Test
+    void dragAndDrop() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo($("#column-b"));
+        $("#column-a").shouldHave(text("B"));
+        $("#column-b").shouldHave(text("A"));
     }
 }
